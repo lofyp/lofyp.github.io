@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Technical support, troubleshooting, and frequently asked questions for GPScope on iPhone.">
+  <title>GPScope Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f4f7fb;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-strong: #ffffff;
+      --text: #172033;
+      --muted: #5d687b;
+      --accent: #1769e0;
+      --accent-soft: rgba(23, 105, 224, 0.1);
+      --border: rgba(23, 32, 51, 0.12);
+      --notice: #fff8df;
+      --notice-text: #5f4700;
+      --shadow: 0 24px 70px rgba(27, 51, 86, 0.12);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0c111b;
+        --surface: rgba(20, 27, 41, 0.94);
+        --surface-strong: #161f30;
+        --text: #edf3ff;
+        --muted: #aeb9cb;
+        --accent: #7db2ff;
+        --accent-soft: rgba(125, 178, 255, 0.12);
+        --border: rgba(231, 239, 255, 0.14);
+        --notice: #382f13;
+        --notice-text: #ffe59a;
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(70, 142, 255, 0.17), transparent 34rem),
+        var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.68;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.16em;
+    }
+
+    .page {
+      width: min(940px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: clamp(28px, 6vw, 64px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 22px;
+      align-items: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-mark {
+      display: grid;
+      width: 78px;
+      height: 78px;
+      place-items: center;
+      color: #ffffff;
+      background: linear-gradient(145deg, #1769e0, #37a8ff);
+      border-radius: 23px;
+      box-shadow: 0 14px 34px rgba(23, 105, 224, 0.26);
+      font-size: 1.55rem;
+      font-weight: 780;
+      letter-spacing: -0.06em;
+    }
+
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+    }
+
+    .subtitle {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 4px;
+    }
+
+    .quick-link {
+      display: block;
+      padding: 17px 18px;
+      color: var(--text);
+      background: var(--surface-strong);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    .quick-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .quick-link strong,
+    .quick-link span {
+      display: block;
+    }
+
+    .quick-link span {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding-top: 34px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    p,
+    ul,
+    ol {
+      margin-top: 0;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .system-card,
+    .contact-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .system-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 650;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .system-item strong {
+      display: block;
+      margin-top: 4px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      padding: 0 19px;
+      background: var(--surface-strong);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    details[open] {
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+    }
+
+    summary {
+      padding: 17px 30px 17px 0;
+      cursor: pointer;
+      font-weight: 680;
+      line-height: 1.4;
+    }
+
+    details p,
+    details ol,
+    details ul {
+      color: var(--muted);
+    }
+
+    details > :last-child {
+      margin-bottom: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 11px 17px;
+      color: #ffffff;
+      background: var(--accent);
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-card code {
+      overflow-wrap: anywhere;
+    }
+
+    .contact-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0 0;
+    }
+
+    .contact-meta div {
+      padding: 14px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+    }
+
+    .contact-meta span,
+    .contact-meta strong {
+      display: block;
+    }
+
+    .contact-meta span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 16px 18px;
+      color: var(--notice-text);
+      background: var(--notice);
+      border-radius: 14px;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 38px;
+      padding-top: 22px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 940px);
+        margin: 10px auto;
+        border-radius: 20px;
+      }
+
+      header {
+        grid-template-columns: 1fr;
+      }
+
+      .app-mark {
+        width: 66px;
+        height: 66px;
+        border-radius: 19px;
+      }
+
+      .quick-links,
+      .system-grid,
+      .contact-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .quick-links,
+      .button,
+      .notice {
+        display: none;
+      }
+
+      details {
+        break-inside: avoid;
+      }
+
+      details > * {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="app-mark" aria-hidden="true">GPS</div>
+      <div>
+        <p class="eyebrow">GPScope for iPhone</p>
+        <h1>Support</h1>
+        <p class="subtitle">Setup help, troubleshooting, and answers to common questions.</p>
+      </div>
+    </header>
+
+    <nav class="quick-links" aria-label="Support topics">
+      <a class="quick-link" href="#start">
+        <strong>Get started</strong>
+        <span>Permissions and requirements</span>
+      </a>
+      <a class="quick-link" href="#faq">
+        <strong>Common questions</strong>
+        <span>GPS, compass, pressure, and more</span>
+      </a>
+      <a class="quick-link" href="#contact">
+        <strong>Contact support</strong>
+        <span>Send a technical support request</span>
+      </a>
+    </nav>
+
+    <section id="start">
+      <h2>Get Started</h2>
+      <div class="system-card">
+        <div class="system-grid">
+          <div class="system-item">
+            <span>Platform</span>
+            <strong>iPhone</strong>
+          </div>
+          <div class="system-item">
+            <span>Requires</span>
+            <strong>iOS 17.0 or later</strong>
+          </div>
+          <div class="system-item">
+            <span>Current version</span>
+            <strong>1.0.0</strong>
+          </div>
+        </div>
+      </div>
+      <p>
+        GPScope uses your iPhone's location, heading, and supported pressure sensors to
+        display altitude, speed, coordinates, GPS accuracy, compass direction,
+        atmospheric pressure, and relative altitude. No account is required.
+      </p>
+      <p>
+        Allow location access while using the App when prompted. Pressure and relative
+        altitude are available only on devices that include compatible barometer hardware.
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Why does GPScope keep searching for a GPS signal?</summary>
+          <p>
+            GPS reception can be weak indoors, underground, between tall buildings, or
+            near large structures. Move to an open outdoor area, make sure Location
+            Services are enabled, and allow the App a short time to obtain an accurate fix.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I enable or restore location access?</summary>
+          <ol>
+            <li>Open iPhone Settings.</li>
+            <li>Go to Privacy &amp; Security &gt; Location Services.</li>
+            <li>Select GPScope.</li>
+            <li>Choose While Using the App and enable Precise Location.</li>
+          </ol>
+          <p>Return to GPScope after changing the setting.</p>
+        </details>
+
+        <details>
+          <summary>Why is the altitude or GPS accuracy changing?</summary>
+          <p>
+            GPS measurements naturally vary with satellite visibility, signal reflections,
+            weather, device orientation, and surroundings. The horizontal and altitude
+            accuracy indicators show the estimated uncertainty reported by iOS. GPScope is
+            a general information tool and is not a surveying or safety-critical instrument.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why is speed unavailable while I am standing still?</summary>
+          <p>
+            iOS provides speed only when it has a valid location update and detects movement.
+            A stationary device, weak GPS reception, or an initial GPS fix may result in an
+            unavailable value. Move in an open area and wait for accuracy to improve.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why is the compass direction inaccurate?</summary>
+          <p>
+            Keep the iPhone away from magnets, speakers, metal surfaces, vehicles, and
+            magnetic cases. If iOS requests calibration, move the phone in a figure-eight
+            pattern. Compass accuracy may also be affected indoors or near electrical equipment.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why are pressure and relative altitude unavailable?</summary>
+          <p>
+            These readings require a compatible barometer. They may not be available on
+            every device or in the iOS Simulator. Relative altitude is measured from the
+            current sensor session and may reset when GPScope restarts or returns after
+            being inactive.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can GPScope work without an internet connection?</summary>
+          <p>
+            Yes. Core GPS and device-sensor features can operate offline. Satellite
+            reception and device hardware determine which readings are available. When the
+            device is online, limited analytics information may be sent to Microsoft
+            Clarity as explained in the Privacy Policy.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I change units or language?</summary>
+          <p>
+            Open GPScope Settings to select length, speed, and pressure units or follow
+            your system settings. You can also choose a supported App language or follow
+            the iPhone's language automatically.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I hide my coordinates?</summary>
+          <p>
+            Open GPScope Settings and turn off Show Coordinates in the Privacy section.
+            Latitude and longitude will then be hidden from the main dashboard.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I add or remove a custom background?</summary>
+          <p>
+            In GPScope Settings, choose Select Image, adjust the image, and confirm the
+            preview. To remove it, use the delete button beside Background Image. GPScope
+            receives only the image you select through Apple's system photo picker.
+          </p>
+        </details>
+
+        <details>
+          <summary>What should I try if the App is not updating?</summary>
+          <ol>
+            <li>Confirm that GPScope has location permission.</li>
+            <li>Move to an open area with a clearer view of the sky.</li>
+            <li>Close and reopen GPScope.</li>
+            <li>Restart the iPhone if sensor readings remain unavailable.</li>
+            <li>Install the latest available iOS and GPScope updates.</li>
+          </ol>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Technical Support</h2>
+      <div class="contact-card">
+        <p>
+          If the information above does not solve the issue, email the GPScope developer.
+          Please include your iPhone model, iOS version, GPScope version, a description of
+          the problem, and steps that reproduce it. Do not include precise coordinates or
+          other sensitive information unless it is necessary for your request.
+        </p>
+
+        <p><strong>Support email:</strong> <code>loouss@outlook.com</code></p>
+
+        <a class="button" href="mailto:loouss@outlook.com?subject=GPScope%20Support%20Request">Email Support</a>
+
+        <div class="contact-meta">
+          <div>
+            <span>App</span>
+            <strong>GPScope</strong>
+          </div>
+          <div>
+            <span>Bundle ID</span>
+            <strong>com.loouss.GPScope</strong>
+          </div>
+        </div>
+      </div>
+
+      <p class="notice">
+        <strong>Publisher action required:</strong> Replace both support-email placeholders
+        with a monitored, publicly usable address before publishing this page or submitting
+        its URL to App Store Connect.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2026 GPScope. All rights reserved.</p>
+      <p><a href="GPScope-Privacy-Policy.html">Privacy Policy</a></p>
+    </footer>
+  </main>
+</body>
+</html>
