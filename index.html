@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for the GPScope iOS application.">
+  <title>GPScope Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f4f7fb;
+      --surface: rgba(255, 255, 255, 0.92);
+      --text: #172033;
+      --muted: #5d687b;
+      --accent: #1769e0;
+      --border: rgba(23, 32, 51, 0.12);
+      --notice: #fff8df;
+      --notice-text: #5f4700;
+      --shadow: 0 24px 70px rgba(27, 51, 86, 0.12);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0c111b;
+        --surface: rgba(20, 27, 41, 0.94);
+        --text: #edf3ff;
+        --muted: #aeb9cb;
+        --accent: #7db2ff;
+        --border: rgba(231, 239, 255, 0.14);
+        --notice: #382f13;
+        --notice-text: #ffe59a;
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(70, 142, 255, 0.17), transparent 34rem),
+        var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.68;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.16em;
+    }
+
+    .page {
+      width: min(900px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: clamp(28px, 6vw, 64px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    header {
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+    }
+
+    .effective-date {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .summary {
+      margin: 28px 0 0;
+      font-size: 1.08rem;
+    }
+
+    nav {
+      margin: 28px 0 8px;
+      padding: 20px 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    nav strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    nav ol {
+      columns: 2;
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    nav li {
+      break-inside: avoid;
+      margin: 4px 0;
+    }
+
+    section {
+      padding-top: 30px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+      line-height: 1.25;
+      letter-spacing: -0.018em;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p,
+    ul {
+      margin-top: 0;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .data-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .data-card h3 {
+      margin: 0 0 7px;
+    }
+
+    .data-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 16px 18px;
+      color: var(--notice-text);
+      background: var(--notice);
+      border-radius: 14px;
+    }
+
+    .contact {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .contact code {
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 22px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 20px, 900px);
+        margin: 10px auto;
+        border-radius: 20px;
+      }
+
+      nav ol {
+        columns: 1;
+      }
+
+      .data-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">GPScope for iOS</p>
+      <h1>Privacy Policy</h1>
+      <p class="effective-date"><strong>Effective date:</strong> August 23, 2026</p>
+      <p class="summary">
+        This Privacy Policy explains how GPScope ("GPScope," "we," "us," or "our")
+        handles information when you use the GPScope mobile application (the "App").
+        GPScope displays GPS and device-sensor readings and uses Microsoft Clarity to
+        help us understand and improve the App experience.
+      </p>
+    </header>
+
+    <nav aria-label="Table of contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#information">Information we handle</a></li>
+        <li><a href="#offline">Offline use</a></li>
+        <li><a href="#clarity">Analytics and Microsoft Clarity</a></li>
+        <li><a href="#use">How we use information</a></li>
+        <li><a href="#sharing">How information is shared</a></li>
+        <li><a href="#retention">Retention and deletion</a></li>
+        <li><a href="#choices">Your choices and rights</a></li>
+        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <section id="information">
+      <h2>1. Information We Handle</h2>
+      <p>
+        GPScope does not require you to create an account. The App requests only the
+        device access needed for its features. Some information remains on your device,
+        while limited analytics information is transmitted to Microsoft Clarity as
+        described below.
+      </p>
+
+      <div class="data-grid">
+        <article class="data-card">
+          <h3>Location data</h3>
+          <p>
+            With your permission, the App accesses precise location readings such as
+            latitude, longitude, altitude, speed, course, heading, and GPS accuracy to
+            show them on the dashboard. GPScope does not store a location history or
+            send precise latitude and longitude to our own servers.
+          </p>
+        </article>
+
+        <article class="data-card">
+          <h3>Motion and pressure data</h3>
+          <p>
+            On supported devices, the App accesses motion-sensor and barometer readings
+            to display atmospheric pressure and relative altitude. These readings are
+            processed for App functionality.
+          </p>
+        </article>
+
+        <article class="data-card">
+          <h3>Photos you select</h3>
+          <p>
+            If you choose a custom background, the App receives only the photo you select
+            through Apple's system photo picker. A resized copy is stored locally in the
+            App's private storage. We do not upload the original photo file or its locally
+            stored copy to our servers. A visual representation of screens where the photo
+            appears may be processed by Clarity as described below.
+          </p>
+        </article>
+
+        <article class="data-card">
+          <h3>Preferences</h3>
+          <p>
+            Language, unit, appearance, coordinate-visibility, and background preferences
+            are stored locally on your device so the App can remember your choices.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="offline">
+      <h2>2. Offline Use</h2>
+      <p>
+        GPScope's core GPS and device-sensor features can operate without an internet
+        connection. Precise coordinates, sensor readings, preferences, and selected
+        background files are processed locally for these features. GPS availability and
+        accuracy still depend on your device, surroundings, and satellite reception.
+      </p>
+      <p>
+        When an internet connection is available, limited analytics information may be
+        transmitted to Microsoft Clarity as described in this Privacy Policy. The Clarity
+        iOS SDK does not upload sessions that occur while the device is offline.
+      </p>
+    </section>
+
+    <section id="clarity">
+      <h2>3. Analytics and Microsoft Clarity</h2>
+      <p>
+        We use <strong>Microsoft Clarity for Mobile Apps</strong> to understand how people
+        interact with GPScope, diagnose usability issues, and improve performance and
+        design. Clarity begins operating when the App starts and may process:
+      </p>
+      <ul>
+        <li>product interactions, including screens visited, taps, touches, and similar usage events;</li>
+        <li>low-level visual and interaction signals used to reconstruct app sessions and create heatmaps;</li>
+        <li>performance information used to assess SDK and App stability; and</li>
+        <li>coarse location inferred from the network IP address.</li>
+      </ul>
+      <p>
+        According to Microsoft's App Store privacy guidance, this information is used for
+        analytics, is not linked to your identity, and is not used for cross-app tracking.
+        GPScope does not provide Clarity with a custom user ID. The App masks the precise
+        latitude/longitude card and the custom background as displayed on the main
+        dashboard. Other screens where a selected photo appears, and other information
+        visible in the interface—such as altitude, speed, pressure, settings, and general
+        interaction patterns—may be represented in Clarity's session reconstruction. The
+        original selected photo file is not intentionally transmitted to Clarity.
+      </p>
+      <p>
+        Clarity sends analytics information to Microsoft when network conditions permit.
+        For more information about Microsoft's handling of information, see the
+        <a href="https://privacy.microsoft.com/privacystatement" rel="noopener noreferrer">Microsoft Privacy Statement</a>
+        and
+        <a href="https://learn.microsoft.com/clarity/mobile-sdk/mobile-sdk-overview" rel="noopener noreferrer">Clarity for Mobile Apps documentation</a>.
+      </p>
+    </section>
+
+    <section id="use">
+      <h2>4. How We Use Information</h2>
+      <p>We use information only to:</p>
+      <ul>
+        <li>provide GPS, compass, speed, altitude, accuracy, pressure, and personalization features;</li>
+        <li>remember your settings and selected background;</li>
+        <li>understand feature usage and improve the App's design and usability;</li>
+        <li>monitor performance, reliability, and security; and</li>
+        <li>respond to support, privacy, or legal requests.</li>
+      </ul>
+      <p>We do not sell your personal information and do not use App information for targeted advertising.</p>
+    </section>
+
+    <section id="sharing">
+      <h2>5. How Information Is Shared</h2>
+      <p>
+        We share limited analytics information with Microsoft solely because Microsoft
+        provides the Clarity analytics service. Microsoft processes that information
+        under its applicable terms and privacy commitments. We may also disclose
+        information when required by law, to protect users or the security of the App, or
+        as part of a business reorganization where legally permitted and subject to
+        appropriate safeguards.
+      </p>
+      <p>
+        We require service providers that process information on our behalf, including
+        Microsoft, to provide the same or an equivalent level of protection described in
+        this Privacy Policy and required by applicable Apple policies and data-protection law.
+      </p>
+      <p>
+        We do not upload precise GPS coordinates or selected background photos to
+        advertisers or data brokers. Local preference files are not uploaded to our
+        servers, although interactions with settings may appear in Clarity analytics.
+      </p>
+    </section>
+
+    <section id="retention">
+      <h2>6. Retention and Deletion</h2>
+      <ul>
+        <li>
+          <strong>On-device information:</strong> preferences and a selected background
+          remain until you change or remove them, reset the App's data, or uninstall the App.
+        </li>
+        <li>
+          <strong>Live sensor information:</strong> GPScope does not create a route or
+          historical location log. Live readings are refreshed as the App runs.
+        </li>
+        <li>
+          <strong>Clarity information:</strong> Microsoft currently states that session
+          playback data is generally retained for 30 days, while heatmaps, labeled or
+          favorited sessions, and interaction data may be retained for up to 9 months.
+          Microsoft may update these periods under its own retention policy.
+        </li>
+      </ul>
+      <p>
+        You can remove a custom background from GPScope Settings. Deleting the App removes
+        its locally stored information from your device. To request deletion of information
+        we control, contact us using the details below. Because Clarity analytics is not
+        linked to an account or identity, we may need additional technical information and
+        may not always be able to associate an analytics record with a particular person.
+      </p>
+    </section>
+
+    <section id="choices">
+      <h2>7. Your Choices and Rights</h2>
+      <ul>
+        <li>
+          <strong>Location:</strong> grant or revoke location access at any time in iOS
+          Settings &gt; Privacy &amp; Security &gt; Location Services &gt; GPScope.
+        </li>
+        <li>
+          <strong>Motion &amp; Fitness:</strong> manage applicable sensor access in iOS
+          Settings &gt; Privacy &amp; Security &gt; Motion &amp; Fitness.
+        </li>
+        <li>
+          <strong>Coordinates:</strong> hide latitude and longitude on the GPScope
+          dashboard from the App's Privacy setting.
+        </li>
+        <li>
+          <strong>Photos:</strong> GPScope uses Apple's system picker and receives only the
+          item you select. You can remove the saved background in GPScope Settings.
+        </li>
+        <li>
+          <strong>Analytics:</strong> uninstalling the App stops future Clarity collection.
+          You may also contact us with an analytics objection or deletion request.
+        </li>
+      </ul>
+      <p>
+        Depending on where you live, you may have rights to request access, correction,
+        deletion, restriction, or objection regarding personal information, or to lodge a
+        complaint with a privacy regulator. Contact us to exercise an applicable right. We
+        may need to verify your request and may retain limited information where required by law.
+      </p>
+    </section>
+
+    <section id="transfers">
+      <h2>8. International Data Transfers</h2>
+      <p>
+        Microsoft may process Clarity information in countries other than the country where
+        you live. Where required, the parties responsible for processing rely on lawful
+        transfer mechanisms and safeguards under applicable data-protection law. See the
+        Microsoft Privacy Statement for more information.
+      </p>
+    </section>
+
+    <section id="children">
+      <h2>9. Children's Privacy</h2>
+      <p>
+        GPScope is a general-audience utility and is not directed to children under 13, or
+        the minimum age required by local law. We do not knowingly request a child's name,
+        contact details, or account information. If you believe a child has provided
+        personal information through a support request, contact us so we can review and
+        delete it where appropriate.
+      </p>
+    </section>
+
+    <section id="security">
+      <h2>10. Security</h2>
+      <p>
+        We use reasonable technical and organizational measures intended to protect the
+        information handled through GPScope. However, no device, storage system, or network
+        transmission is completely secure, and we cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy to reflect changes to GPScope, third-party
+        services, or legal requirements. We will post the updated policy at this location
+        and revise the effective date above. If a change materially affects your rights,
+        we will provide additional notice where required.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>12. Contact Us</h2>
+      <div class="contact">
+        <p>
+          For privacy questions, requests, or complaints, contact the GPScope developer at:
+        </p>
+        <p><strong>Email:</strong> <code>loouss@outlook.com</code></p>
+        <p>
+          Please include "GPScope Privacy Request" in the subject line and identify the
+          country or region where you live so we can respond under the applicable law.
+        </p>
+      </div>
+      <p class="notice">
+        <strong>Publisher action required:</strong> Replace the email placeholder above
+        with a monitored, publicly usable contact address before publishing this page or
+        submitting its URL to App Store Connect.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2026 GPScope. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
